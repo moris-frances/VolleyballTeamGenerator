@@ -43,6 +43,11 @@ public class Player {
     public void setTaken(boolean taken) {
         this.taken = taken;
     }
-
+    public boolean hasSkill(String skillToFind){
+        for(String skill : this.skills){
+            if(skill.equals(skillToFind)) return true;
+        }
+        return false;
+    }
     
 }
