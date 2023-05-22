@@ -26,8 +26,9 @@ public class GeneratedTeam {
     //constructor for the generaed team; the whole class is written to return an a ready to use generated team object
     public GeneratedTeam(ArrayList<Player> availablePlayers, int playerCount, int availableCount) {
         neededSkills = new ArrayList<Skill>(
-            Arrays.asList(new Skill("receive", 3), 
+            Arrays.asList( 
                     new Skill("set", 2), 
+                    new Skill("receive", 3),
                     new Skill("offence", 2)));
         this.availableCount = availableCount;
         playerList = new ArrayList<>();
