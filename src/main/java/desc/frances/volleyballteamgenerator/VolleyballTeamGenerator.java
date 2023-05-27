@@ -38,12 +38,13 @@ public class VolleyballTeamGenerator {
         
         availablePlayers.add(new Player("Stefan", new ArrayList<String>(Arrays.asList("offence", "receive"))));
         availablePlayers.add(new Player("Drago", new ArrayList<String>(Arrays.asList("offence"))));
-        availablePlayers.add(new Player("Sasho B.", new ArrayList<String>(Arrays.asList("offence"))));
-        availablePlayers.add(new Player("Dimitar.", new ArrayList<String>(Arrays.asList("offence", "serve", "receive"))));
+        //availablePlayers.add(new Player("Sasho B.", new ArrayList<String>(Arrays.asList("offence"))));
+       availablePlayers.add(new Player("Rado", new ArrayList<String>(Arrays.asList("offence", "serve","receive")))); 
+       availablePlayers.add(new Player("Dimitar.", new ArrayList<String>(Arrays.asList("offence", "serve", "receive"))));
         availablePlayers.add(new Player("BorislavaFr", new ArrayList<String>(Arrays.asList(""))));
-        availablePlayers.add(new Player("Ivan B. Fr 1 ", new ArrayList<String>(Arrays.asList(""))));
-        availablePlayers.add(new Player("Ivan B. Fr 2 ", new ArrayList<String>(Arrays.asList(""))));
-        availablePlayers.add(new Player("Ivan B. Fr 3 ", new ArrayList<String>(Arrays.asList(""))));
+       // availablePlayers.add(new Player("Ivan B. Fr 1 ", new ArrayList<String>(Arrays.asList(""))));
+       // availablePlayers.add(new Player("Ivan B. Fr 2 ", new ArrayList<String>(Arrays.asList(""))));
+        //availablePlayers.add(new Player("Ivan B. Fr 3 ", new ArrayList<String>(Arrays.asList(""))));
 //        availablePlayers.add(new Player("Hristian", new ArrayList<String>(Arrays.asList("serve", "set", "receive"))));
 //        availablePlayers.add(new Player("Marlene", new ArrayList<String>(Arrays.asList( "receive"))));
 //        
