@@ -60,6 +60,7 @@ public class GeneratedTeam {
     private static void addWithSkills(ArrayList<Player> availablePlayers, int playerCount){
         for(Skill skill : neededSkills)
         {
+            checkIfSkillCovered(skill);
             for(Player player: availablePlayers)
             {
                 //breaks the loop if the needed skill is found as many times as needed
@@ -79,6 +80,7 @@ public class GeneratedTeam {
             }
         }
     }
+    
     //adds players regardless of skills
     private static void addWithoutSkills(ArrayList<Player> availablePlayers, int playerCount) {
         for(Player player: availablePlayers)
@@ -90,6 +92,14 @@ public class GeneratedTeam {
             player.setTaken(true);
         }
     
+    }
+    private static void checkIfSkillCovered(Skill skill){
+        for(Player player : playerList){
+            if(player.hasSkill(skill.name)){
+                if (!(skill.neededNumber > 0)) break;
+                skill.neededNumber --;
+            }
+        }
     }
     
 }
