@@ -4,7 +4,7 @@
 
 package desc.frances.volleyballteamgenerator;
 
-import static desc.frances.volleyballteamgenerator.GeneratedTeam.generateTeam;
+
 import java.sql.DriverManager;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -84,4 +84,4 @@ public class VolleyballTeamGenerator {
     
 
     
-}
+
