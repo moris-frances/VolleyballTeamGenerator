@@ -21,8 +21,8 @@ public class VolleyballTeamGenerator {
     private static int numberOfTeams = 3;
     
    private static void initAvailablePlayers(String playerJson){
-        availablePlayers = new ArrayList<Player>();
-        convertPlayerJsonToList(playerJson);
+        //availablePlayers = new ArrayList<Player>();
+        availablePlayers = convertPlayerJsonToList(playerJson);
 //        availablePlayers.add(new Player("Moris", new ArrayList<String>(Arrays.asList("offence", "serve"))));
 //        availablePlayers.add(new Player("Jivko", new ArrayList<String>(Arrays.asList("offence", "serve", "set", "receive"))));
 //        availablePlayers.add(new Player("Stelyo", new ArrayList<String>(Arrays.asList("offence", "serve", "receive"))));
