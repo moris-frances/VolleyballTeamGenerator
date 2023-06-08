@@ -33,9 +33,6 @@ public class jsonUtils {
             }
             playerList.add(new Player(name, skills));
         }
-        for(Player p : playerList){
-            System.out.println(p.getName());
-        }
         return playerList;
     
     }
