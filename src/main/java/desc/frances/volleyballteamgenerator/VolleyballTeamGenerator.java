@@ -5,9 +5,8 @@
 package desc.frances.volleyballteamgenerator;
 
 
-import java.sql.DriverManager;
+import static desc.frances.volleyballteamgenerator.jsonUtils.convertPlayerJsonToList;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Collections;
 
 /**
@@ -21,20 +20,21 @@ public class VolleyballTeamGenerator {
     private static ArrayList<GeneratedTeam> teams = new ArrayList<>();
     private static int numberOfTeams = 3;
     
-   private static void initAvailablePlayers(){
+   private static void initAvailablePlayers(String playerJson){
         availablePlayers = new ArrayList<Player>();
-        availablePlayers.add(new Player("Moris", new ArrayList<String>(Arrays.asList("offence", "serve"))));
-        availablePlayers.add(new Player("Jivko", new ArrayList<String>(Arrays.asList("offence", "serve", "set", "receive"))));
-        availablePlayers.add(new Player("Stelyo", new ArrayList<String>(Arrays.asList("offence", "serve", "receive"))));
-        availablePlayers.add(new Player("Moritz", new ArrayList<String>(Arrays.asList("serve", "offence"))));
-        availablePlayers.add(new Player("Berni", new ArrayList<String>(Arrays.asList("offence", "receive"))));
-        availablePlayers.add(new Player("Sophie", new ArrayList<String>(Arrays.asList("set", "receive","offence", "serve"))));  
-        availablePlayers.add(new Player("Sasho B.", new ArrayList<String>(Arrays.asList("offence", "serve"))));
-        availablePlayers.add(new Player("Kristina", new ArrayList<String>(Arrays.asList(""))));
-        availablePlayers.add(new Player("Drago", new ArrayList<String>(Arrays.asList("offence"))));
-        availablePlayers.add(new Player("Borislava", new ArrayList<String>(Arrays.asList("receive"))));
-        availablePlayers.add(new Player("Dimitar.", new ArrayList<String>(Arrays.asList("offence", "serve", "receive"))));
-        availablePlayers.add(new Player("Niki", new ArrayList<String>(Arrays.asList("offence","set", "serve", "receive"))));
+        convertPlayerJsonToList(playerJson);
+//        availablePlayers.add(new Player("Moris", new ArrayList<String>(Arrays.asList("offence", "serve"))));
+//        availablePlayers.add(new Player("Jivko", new ArrayList<String>(Arrays.asList("offence", "serve", "set", "receive"))));
+//        availablePlayers.add(new Player("Stelyo", new ArrayList<String>(Arrays.asList("offence", "serve", "receive"))));
+//        availablePlayers.add(new Player("Moritz", new ArrayList<String>(Arrays.asList("serve", "offence"))));
+//        availablePlayers.add(new Player("Berni", new ArrayList<String>(Arrays.asList("offence", "receive"))));
+//        availablePlayers.add(new Player("Sophie", new ArrayList<String>(Arrays.asList("set", "receive","offence", "serve"))));  
+//        availablePlayers.add(new Player("Sasho B.", new ArrayList<String>(Arrays.asList("offence", "serve"))));
+//        availablePlayers.add(new Player("Kristina", new ArrayList<String>(Arrays.asList(""))));
+//        availablePlayers.add(new Player("Drago", new ArrayList<String>(Arrays.asList("offence"))));
+//        availablePlayers.add(new Player("Borislava", new ArrayList<String>(Arrays.asList("receive"))));
+//        availablePlayers.add(new Player("Dimitar.", new ArrayList<String>(Arrays.asList("offence", "serve", "receive"))));
+//        availablePlayers.add(new Player("Niki", new ArrayList<String>(Arrays.asList("offence","set", "serve", "receive"))));
 //        availablePlayers.add(new Player("Viki", new ArrayList<String>(Arrays.asList("offence"))));
 //        availablePlayers.add(new Player("Ivan B.", new ArrayList<String>(Arrays.asList("offence", "set", "serve"))));
 //        availablePlayers.add(new Player("Ivan", new ArrayList<String>(Arrays.asList("offence", "serve"))));
@@ -56,8 +56,11 @@ public class VolleyballTeamGenerator {
     public static void main(String[] args) {
         numOfTeamMembers = Integer.parseInt(args[0]);
         numberOfTeams = Integer.parseInt(args[1]);
-        initAvailablePlayers();
-        
+        initAvailablePlayers(args[2]);
+        if(args[2]==null){
+            System.out.println("NO PLAYERS");
+            return;
+        }
         for(int i=1 ; i<=numberOfTeams ; i++){
             //if (availableCount < numOfTeamMembers) initAvailablePlayers();
             GeneratedTeam team = new GeneratedTeam(availablePlayers, numOfTeamMembers, availableCount);
