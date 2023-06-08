@@ -29,7 +29,8 @@ public class GeneratedTeam {
             Arrays.asList( 
                     new Skill("set", 2), 
                     new Skill("receive", 3),
-                    new Skill("offence", 2)));
+                    new Skill("offence", 2),
+                    new Skill("serve", 2)));
         this.availableCount = availableCount;
         playerList = new ArrayList<>();
         this.playerCount = playerCount; 
