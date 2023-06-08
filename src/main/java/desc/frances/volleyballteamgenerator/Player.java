@@ -13,7 +13,7 @@ import java.util.ArrayList;
 public class Player {
     private String name;
     private ArrayList<String> skills;
-    private boolean taken = false;
+    private boolean taken=false;
 
     public Player(String name, ArrayList<String>  skills) {
         this.name = name;

@@ -1,0 +1,6 @@
+#!/bin/bash
+
+playerJsonLine='[{"name":"Moris","skills":["offence","serve"]},{"name":"Jivko","skills":["offence","serve","set","receive"]},{"name":"Stelyo","skills":["offence","serve","receive"]},{"name":"Moritz","skills":["serve","offence"]},{"name":"Berni","skills":["offence","receive"]},{"name":"Sophie","skills":["set","receive","offence","serve"]},{"name":"Sasho B.","skills":["offence","serve"]},{"name":"Kristina","skills":[""]},{"name":"Drago","skills":["offence"]},{"name":"Borislava","skills":["receive"]},{"name":"Dimitar.","skills":["offence","serve","receive"]},{"name":"Niki","skills":["offence","set","serve","receive"]},{"name":"Viki","skills":["offence"]},{"name":"Ivan B.","skills":["offence","set","serve"]},{"name":"Ivan","skills":["offence","serve"]},{"name":"Asen","skills":["set","receive","offence","serve"]},{"name":"Stefan","skills":["offence","receive"]},{"name":"BorislavaFr","skills":[""]},{"name":"Ivan B. Fr 1 ","skills":[""]},{"name":"Ivan B. Fr 2 ","skills":[""]},{"name":"Ivan B. Fr 3 ","skills":[""]},{"name":"Hristian","skills":["serve","set","receive"]},{"name":"Marlene","skills":["receive"]},{"name":"Sasho","skills":["set","receive"]}]'
+echo $playerJsonLine
+echo "creating team"
+mvn clean compile exec:java -Dexec.args="6 3 '$playerJsonLine'"

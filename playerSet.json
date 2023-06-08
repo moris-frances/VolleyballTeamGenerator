@@ -1,0 +1,70 @@
+[
+    {
+      "name": "Moris",
+      "skills": ["offence", "serve"]
+    },
+    {
+      "name": "Stelyo",
+      "skills": ["offence", "serve", "receive"]
+    },
+    {
+      "name": "Berni",
+      "skills": ["offence", "receive"]
+    },
+    {
+      "name": "Sophie",
+      "skills": ["set", "receive", "offence", "serve"]
+    },
+    {
+      "name": "Sasho B.",
+      "skills": ["offence", "serve"]
+    },
+    {
+      "name": "Kristina",
+      "skills": ["receive", "serve"]
+    },
+    {
+      "name": "Drago",
+      "skills": ["offence"]
+    },
+    {
+      "name": "Borislava",
+      "skills": ["receive"]
+    },
+    {
+      "name": "Dimitar.",
+      "skills": ["offence", "serve", "receive"]
+    },
+    {
+      "name": "Niki",
+      "skills": ["offence", "set", "serve", "receive"]
+    },
+    {
+      "name": "Ivan B.",
+      "skills": ["offence", "set", "serve"]
+    },
+    {
+      "name": "Ivan",
+      "skills": ["offence", "serve"]
+    },
+    {
+      "name": "Asen",
+      "skills": ["set", "receive", "offence", "serve"]
+    },
+    {
+      "name": "Stefan",
+      "skills": ["offence", "receive"]
+    },
+    {
+      "name": "QnaFr",
+      "skills": [""]
+    },
+    {
+      "name": "Qna",
+      "skills": ["offence", "set", "receive"]
+    },
+    {
+      "name": "Sasho",
+      "skills": ["set", "receive", "serve"]
+    }
+]

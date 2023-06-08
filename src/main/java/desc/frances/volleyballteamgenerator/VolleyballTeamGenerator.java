@@ -26,13 +26,15 @@ public class VolleyballTeamGenerator {
         availableCount = availablePlayers.size();
    }
     public static void main(String[] args) {
+        
         numOfTeamMembers = Integer.parseInt(args[0]);
         numberOfTeams = Integer.parseInt(args[1]);
-        initAvailablePlayers(args[2]);
+        
         if(args[2]==null){
             System.out.println("NO PLAYERS");
             return;
         }
+        initAvailablePlayers(args[2]);
         for(int i=1 ; i<=numberOfTeams ; i++){
             GeneratedTeam team = new GeneratedTeam(availablePlayers, numOfTeamMembers, availableCount);
             availableCount = availableCount - numOfTeamMembers;

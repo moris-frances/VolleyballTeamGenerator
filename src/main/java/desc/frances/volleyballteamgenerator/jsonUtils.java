@@ -16,8 +16,7 @@ import javax.json.JsonValue;
  * @author slasherer
  */
 public class jsonUtils {
-    static String test = "[{\"name\":\"Moris\",\"skills\":[\"offence\",\"serve\"]},{\"name\":\"Jivko\",\"skills\":[\"offence\",\"serve\",\"set\",\"receive\"]},{\"name\":\"Stelyo\",\"skills\":[\"offence\",\"serve\",\"receive\"]},{\"name\":\"Moritz\",\"skills\":[\"serve\",\"offence\"]},{\"name\":\"Berni\",\"skills\":[\"offence\",\"receive\"]},{\"name\":\"Sophie\",\"skills\":[\"set\",\"receive\",\"offence\",\"serve\"]},{\"name\":\"Sasho B.\",\"skills\":[\"offence\",\"serve\"]},{\"name\":\"Kristina\",\"skills\":[\"\"]},{\"name\":\"Drago\",\"skills\":[\"offence\"]},{\"name\":\"Borislava\",\"skills\":[\"receive\"]},{\"name\":\"Dimitar.\",\"skills\":[\"offence\",\"serve\",\"receive\"]},{\"name\":\"Niki\",\"skills\":[\"offence\",\"set\",\"serve\",\"receive\"]},{\"name\":\"Viki\",\"skills\":[\"offence\"]},{\"name\":\"Ivan B.\",\"skills\":[\"offence\",\"set\",\"serve\"]},{\"name\":\"Ivan\",\"skills\":[\"offence\",\"serve\"]},{\"name\":\"Asen\",\"skills\":[\"set\",\"receive\",\"offence\",\"serve\"]},{\"name\":\"Stefan\",\"skills\":[\"offence\",\"receive\"]},{\"name\":\"BorislavaFr\",\"skills\":[\"\"]},{\"name\":\"Ivan B. Fr 1 \",\"skills\":[\"\"]},{\"name\":\"Ivan B. Fr 2 \",\"skills\":[\"\"]},{\"name\":\"Ivan B. Fr 3 \",\"skills\":[\"\"]},{\"name\":\"Hristian\",\"skills\":[\"serve\",\"set\",\"receive\"]},{\"name\":\"Marlene\",\"skills\":[\"receive\"]},{\"name\":\"Sasho\",\"skills\":[\"set\",\"receive\"]}]";
-    
+
     public static ArrayList<Player> convertPlayerJsonToList(String playerJson){
         ArrayList<Player> playerList = new ArrayList<Player>();
         String jsonResponse = playerJson.toString();
@@ -26,18 +25,15 @@ public class jsonUtils {
         jsonReader.close();
         
         for (JsonValue object : array){
-            String name = ((JsonObject)object).get("name").toString();
+            String name = ((JsonObject)object).get("name").toString().replaceAll("\"", "");
             ArrayList<String> skills = new ArrayList<String>();
             for(JsonValue skill : (JsonArray)((JsonObject)object).get("skills")){
-                skills.add(skill.toString());
+                skills.add(skill.toString().replaceAll("\"", ""));
             }
             playerList.add(new Player(name, skills));
         }
         return playerList;
     
     }
-    
-    public static void main(String[] args) {
-        convertPlayerJsonToList(test);
-    }
+   
 }
